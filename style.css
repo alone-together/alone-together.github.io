@@ -1,0 +1,10 @@
+html, body {
+  height: 100%; 
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 60ch;
+  margin: 0 auto;
+}
