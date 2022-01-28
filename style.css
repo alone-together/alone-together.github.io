@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,600;1,300;1,600&display=swap");
 *, *::before, *::after {
@@ -28,6 +28,10 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+}
+
+a {
+  color: var(--color-links);
 }
 
 body {
@@ -259,6 +263,10 @@ header #logo {
   font-family: var(--lead-font);
 }
 
+footer {
+  font-family: var(--body-font);
+}
+
 /* TABLES */
 table {
   margin-top: 0.75rem;
@@ -302,14 +310,14 @@ table caption {
 }
 
 :root {
-  --color-text: #eee;
+  --color-text: #fffcf2;
   --color-text-bright: #fff;
-  --color-text-muted: #ddd;
-  --color-background: #333;
+  --color-text-muted: #ccc5b9;
+  --color-background: #252422;
   --color-background-body: var(--color-background);
-  --color-background-alt: #444;
-  --color-links: #f00;
-  --color-focus: #0f0;
+  --color-background-alt: #403d39;
+  --color-links: #eb5e28;
+  --color-focus: #eb5e28;
 }
 
 .rhythm-check {
@@ -319,9 +327,12 @@ table caption {
 }
 
 :root {
-  --lead-font: "IBM Plex Sans", sans-serif;
-  --body-font: "Lora", serif;
+  --lead-font: "Bungee", sans-serif;
+  --body-font: "IBM Plex Sans", sans-serif;
   --mono-font: "Source Code Pro", monospace;
 }
 
-/*# sourceMappingURL=mueller.css.map */
+#logo {
+  font-size: 1.953125rem;
+  line-height: 3rem;
+}
