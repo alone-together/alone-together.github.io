@@ -1,5 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,600;1,300;1,600&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-size: 1rem;
+}
+
 html, body {
-  height: 100%; 
+  height: 100%;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
 }
 
 body {
@@ -9,6 +37,291 @@ body {
   margin: 0 auto;
 }
 
-#alone, #together {
-  font-size: 20vw;
+main {
+  flex: 1 0 auto;
 }
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  gap: 10px;
+}
+nav a {
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+:root {
+  --lead-font: sans-serif;
+  --body-font: serif;
+  --mono-font: monospace;
+}
+
+main {
+  background: var(--color-background);
+  padding: 1.5rem;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: var(--body-font);
+  color: var(--color-text);
+  background: var(--color-background-body);
+}
+
+section::after {
+  display: block;
+  content: "";
+  pointer-events: none;
+  width: 40%;
+  height: 1.5rem;
+  border-top: 1px solid var(--color-text-muted);
+  margin: 3rem auto 1.5rem;
+}
+
+section:last-of-type::after {
+  display: none;
+}
+
+h1 {
+  font-size: 2.44140625rem;
+  line-height: 3rem;
+}
+
+h2 {
+  font-size: 1.953125rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 1.5625rem;
+  line-height: 3rem;
+}
+
+h4, h5, h6 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+h5, h6 {
+  font-style: italic;
+}
+
+h6 {
+  color: var(--color-text-muted);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: var(--body-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--lead-font);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1.5rem;
+}
+
+/* LISTS */
+ul, ol {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+ul ul, ul ol, ol ul, ol ol {
+  margin-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: circle inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+dl {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+dl dt {
+  font-weight: bold;
+}
+dl dd {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* BLOCK QUOTES */
+blockquote {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 1px solid var(--color-text-muted);
+}
+blockquote cite {
+  font-style: italic;
+}
+blockquote cite::before {
+  content: "- ";
+}
+
+p > cite {
+  font-style: normal;
+  font-weight: bold;
+}
+p > cite::before {
+  content: "[";
+}
+p > cite::after {
+  content: "]";
+}
+
+/* DETAILS */
+details {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+details > * {
+  margin-left: 1.5rem;
+  margin-bottom: 0;
+  font-style: italic;
+}
+details summary {
+  margin-left: 0;
+  font-style: normal;
+}
+
+/* TEXT STYLING */
+sup, sub {
+  line-height: 0;
+}
+
+code, samp {
+  font-family: var(--mono-font);
+  background: var(--color-text);
+  color: var(--color-background);
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.3rem;
+  line-height: 0;
+}
+
+pre {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  white-space: pre-wrap;
+  background: var(--color-text);
+  border-radius: 0.4rem;
+}
+pre code, pre samp {
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER AND FOOTER */
+header, footer {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: var(--lead-font);
+  background: var(--color-background);
+  padding: 0.75rem 0;
+}
+
+header {
+  padding: 0.75rem 1.5rem;
+}
+header #logo {
+  font-family: var(--lead-font);
+}
+
+/* TABLES */
+table {
+  margin-top: 0.75rem;
+  margin-bottom: calc(0.75rem - 2px);
+  margin-left: auto;
+  margin-right: auto;
+  white-space: pre-line;
+  table-layout: auto;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-top: 2px solid var(--color-text);
+  border-bottom: 2px solid var(--color-text);
+}
+table th, table td {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  height: 0;
+}
+table tr {
+  height: 3rem;
+}
+table tbody > tr:first-child {
+  border-top: 1px solid var(--color-text);
+}
+table tbody > tr:last-child {
+  border-bottom: 1px solid var(--color-text);
+}
+table tbody > tr:nth-child(3n) {
+  border-bottom: 1px dotted var(--color-text);
+}
+table caption {
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  padding-top: 0.75rem;
+  font-style: italic;
+  caption-side: bottom;
+}
+
+:root {
+  --color-text: #333;
+  --color-text-bright: #fff;
+  --color-text-muted: #aaa;
+  --color-background: #fff;
+  --color-background-body: var(--color-background);
+  --color-background-alt: #777;
+  --color-links: #f00;
+  --color-focus: #0f0;
+}
+
+.rhythm-check {
+  line-height: 1.5rem;
+  background: linear-gradient(to bottom, #fff, #fff 1.5rem, #ccc 1.5rem, #ccc);
+  background-size: 100% 3rem;
+}
+
+:root {
+  --lead-font: "IBM Plex Sans", sans-serif;
+  --body-font: "Lora", serif;
+  --mono-font: "Source Code Pro", monospace;
+}
+
+/*# sourceMappingURL=mueller.css.map */
