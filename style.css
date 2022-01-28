@@ -8,3 +8,7 @@ body {
   max-width: 60ch;
   margin: 0 auto;
 }
+
+#alone, #together {
+  font-size: 20vw;
+}
