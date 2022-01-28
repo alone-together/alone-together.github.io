@@ -302,12 +302,12 @@ table caption {
 }
 
 :root {
-  --color-text: #333;
+  --color-text: #eee;
   --color-text-bright: #fff;
-  --color-text-muted: #aaa;
-  --color-background: #fff;
+  --color-text-muted: #ddd;
+  --color-background: #333;
   --color-background-body: var(--color-background);
-  --color-background-alt: #777;
+  --color-background-alt: #444;
   --color-links: #f00;
   --color-focus: #0f0;
 }
